@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.personalBackground{
+    background-color: #f6f6fe;
+    font-size: 15px;
+    background-image: url('./assets/images/bg-top.svg'), url('./assets/images/bg-bottom.svg');
+    background-position: right top, left bottom;
+    background-repeat: no-repeat;
+}
+
+.col-xlight{
+    color: hsl(240, 78%, 98%);
+}
+
+.col-light{
+    color: hsl(234, 14%, 74%);
+}
+
+.col-med{
+    color: hsl(233, 13%, 49%);
+}
+
+.col-dark{
+    color: hsl(232, 13%, 33%);
+}
+
+.button::before{
+    content: '';
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: .4s;
+}
+
+input:checked + .button::before{
+    transform: translateX(1.5rem);
+}
